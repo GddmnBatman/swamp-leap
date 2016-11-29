@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Forms Demo
+	</title>
+</head>
+<body>
+<h1>Register</h1>
+<br>
+<form>
+	<!-- Label using "for" attaches the label to the input -->
+	<label for="fname">First Name:</label>
+	<!-- type is what you want the input to be, name adds an identifier, placehold is the graytext
+	and required means it must be filled out before the form can be sent -->
+	<input id="fname" type="text" name="fname" placeholder="First Name" required>
+
+	<label for="lname">Last Name:</label>
+	<input id="lname" type="text" name="lname" placeholder="Last Name" required>
+
+	<br>
+
+	<label for="gender">Male</label>
+	<!-- using the same name for the radio buttons means only one button can be selected in this radio group -->
+	<input id="gender" type="radio" name="gender" required="">
+
+	<label for="gender">Female</label>
+	<input id="gender" type="radio" name="gender" required="">
+
+	<label for="gender">Other</label>
+	<input id="gender" type="radio" name="gender" required="">
+
+	<br>
+
+	<label for="email">Email:</label>
+	<!-- using the email type means it will request correct email format -->
+	<input id="email" type="email" name="email" placeholder="Email Address" required>
+
+	<label for="password">Password:</label>
+	<!-- password type automatically doesnt display the actual value. Minlength and maxlength sets the password length or box length -->
+	<input id="password" type="password" name="password" placeholder="Password" required maxlength="10" minlength="5">
+	<!-- another way of doing password lenght is pattern=".{5,10}" required title="Password must be between 5 and 10 characters long-->
+
+	<br>
+
+	<label for="birthday">Birthday:
+			<!-- size is how big do you want the dropdown to automatically display -->
+			<select name="Month" size="1" required="">
+				<!-- selected means that will be the default option -->
+				<option selected="">Month</option>
+				<option>September</option>
+				<option>October</option>
+				<option>November</option>
+			</select>
+
+			<select name="Day" size="1" required="">
+				<option selected="">Day</option>
+				<option>24</option>
+				<option>25</option>
+				<option>26</option>
+			</select>
+
+			<select name="Year" size="1" required="">
+				<option selected="">Year</option>
+				<option>1988</option>
+				<option>1989</option>
+				<option>1990</option>
+			</select>
+	</label>
+
+	<br>
+
+	<label for="tandc">I agree to the terms and conditions</label>
+	<input id="tandc" type="checkbox" name="tandc" required="">
+
+	<br>
+
+	<button>Submit</button>
+
+
+
+</form>
+</body>
+</html>
